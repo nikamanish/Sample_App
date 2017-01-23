@@ -2,6 +2,11 @@
 # empty
 
 manish:
-  name: Manish Nikam
+  name: Nikam Manish Kumar
   email: nikamanish007@gmail.com
   password_digest: <%= User.digest("manish")%>
+
+foo:
+  name: Foo Bar
+  email: foo@bar.com
+  password_digest: <%= User.digest("123456")%>
