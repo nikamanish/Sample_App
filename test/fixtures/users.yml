@@ -3,10 +3,18 @@
 
 manish:
   name: Nikam Manish Kumar
-  email: nikamanish007@gmail.com
+  email: manish@gmail.com
   password_digest: <%= User.digest("manish")%>
+  admin: true
 
 foo:
   name: Foo Bar
-  email: foo@bar.com
-  password_digest: <%= User.digest("123456")%>
+  email: manish-31@gmail.com
+  password_digest: <%= User.digest("manish")%>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User_#{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('manish') %>
+<% end %>
