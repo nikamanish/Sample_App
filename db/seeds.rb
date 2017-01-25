@@ -9,7 +9,9 @@ User.create!(name: "Manish Nikam",
 			 email: "manish@gmail.com",
 			 password: "manish",
 			 password_confirmation: "manish",
-			 admin: true)
+			 admin: true,
+			 activated: true,
+			 activated_at: Time.zone.now)
 
 99.times do |i|
 	name = Faker::Name.name
@@ -18,5 +20,7 @@ User.create!(name: "Manish Nikam",
 	User.create!(name: name,
 				 email: email,
 				 password_confirmation: password,
-				 password: password)
+				 password: password,
+				 activated: true,
+				 activated_at: Time.zone.now)
 end
